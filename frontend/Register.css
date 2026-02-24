@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+nav {
+    background-color: rgba(193, 225, 224, 0.971);
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav .logo {
+    color: rgb(64, 64, 113);
+    font-size: 40px;
+}
+
+.reg {
+    margin: 225px;
+}

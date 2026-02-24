@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+     <nav>
+            <div class="logo">STUdentClasses</div>
+    </nav>
+
+    <div class="personal">
+        <h1>INFORMATION</h1>
+
+        <p id="displayName">Name - </p>
+        <p id="displayAge">age - </p>
+        <p id="displayClass">class - </p>
+    </div>
+
+    <div class="attendance">
+    <h1>ATTENDANCE</h1>
+
+    <h2>Total Attendance</h2>
+    <input type="number" id="total" placeholder="Total Classes">
+<input type="number" id="attended" placeholder="Attended Classes">
+<button onclick="updateAttendance()">Update</button>
+
+<p>Attendance %: <span id="percentage"></span></p>
+</div>
+
+    <button onclick="logoutUser()">Logout</button>
+    
+    <script src="dashboard.js"></script>
+</body>
+</html>
