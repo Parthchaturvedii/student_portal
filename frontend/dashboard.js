@@ -18,7 +18,7 @@ async function updateAttendance() {
 
     const user = JSON.parse(localStorage.getItem("user"));
 
-    const response = await fetch("http://localhost:5000/update-attendance", {
+    const response = await fetch("https://student-portal-3-8bbc.onrender.com/update-attendance", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

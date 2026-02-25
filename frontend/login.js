@@ -16,7 +16,7 @@ async function loginUser(event) {
         return;
     }
 
-    const response = await fetch("http://localhost:5000/login", {
+    const response = await fetch("https://student-portal-3-8bbc.onrender.com/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

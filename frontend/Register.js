@@ -12,7 +12,7 @@ async function registerUser() {
     }
 
     try {
-        const response = await fetch("http://localhost:5000/register", {
+        const response = await fetch("https://student-portal-3-8bbc.onrender.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
