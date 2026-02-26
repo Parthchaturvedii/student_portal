@@ -7,25 +7,25 @@ const jwt = require("jsonwebtoken");
 // REGISTER
 router.post("/register", async (req, res) => {
   try {
-    const { name, age, studentClass,  email, password } = req.body;
+    const { name, age, studentClass, email, password } = req.body;
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.json({ message: "User already exists" });
     }
 
+    // 1. Generate the hash
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const newUser = new User({
       name,
-      age: Number(age),        // convert to number
+      age: Number(age),
       studentClass,
       email,
-      password
+      password: hashedPassword  // <-- FIX: Change 'password' to 'hashedPassword'
     });
 
     await newUser.save();
-
     res.json({ message: "User registered successfully" });
 
   } catch (error) {
