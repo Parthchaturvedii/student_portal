@@ -48,15 +48,10 @@ router.post("/login", async (req, res) => {
       return res.json({ message: "Invalid password" });
     }
 
-    const token = jwt.sign({ id: user._id }, "secretkey", {
-      expiresIn: "1h"
-    });
-
-    res.json({
-      message: "Login successful",
-      token,
-      user
-    });
+    res.json({ 
+            message: "Login successful", 
+            user: { name: user.name, email: user.email, studentClass: user.studentClass, age: user.age } 
+        });
 
   } catch (error) {
     res.status(500).json({ message: "Server error" });
